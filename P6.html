@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color:beige;
+            font-family:arial,sans-serif;
+        }
+        .login-box{
+            width:300px;
+            margin:50px auto;
+            padding:20px;
+            border:1px solid maroon;
+            border-radius:10px;
+            box-shadow:0 0 10px maroon;
+            background-color:bisque;
+        }
+        .login-box h1{
+            text-align:center;
+            color:maroon;
+            text-decoration:underline solid steelblue;
+        }
+        .login-box input{
+            width:100%;
+            padding:5px;
+            margin:10px auto;
+            box-sizing:border-box;
+        }
+        .login-box button{
+            width:100%;
+            margin:10px auto;
+            padding:3px;
+            border:1px solid maroon;
+            background-color:steelblue;
+            color:white;
+            transition-duration:0.4s;
+            cursor:pointer;
+        }
+        .login-box button:hover{
+            background-color:white;
+            color:steelblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-box">
+        <h1>Login</h1>
+        <form name="myForm" action="#" onsubmit="return validateForm()" method="post">
+            <label for="email">Email:</label>
+            <input id="email" type="text" name="Email_ID" placeholder="example@xyz.com">
+
+            <label for="pass">Password:</label>
+            <input id="pass" type="password" name="Pass" placeholder="**********">
+
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <script>
+        function validateForm(){
+            var email= document.getElementById("email").value;
+            var pass = document.getElementById("pass").value;
+
+            if(email===""||pass===""){
+                alert("Fields can't be empty !!");
+                return false;
+            }
+
+            var atPos= email.indexOf("@");
+            var dotPos= email.lastIndexOf(".");
+
+            if(atPos<1||dotPos<atPos+2||dotPos+2>=email.length){
+                alert("Invalid Email !! Plz enter a valid Email");
+                return false;
+            }
+
+            if(pass.length<6){
+                alert("Password must contain atleast 6 characters");
+                return false;
+            }
+
+            alert("Submitting the form....");
+            return true;
+        }
+    </script>
+</body>
+
+</html>

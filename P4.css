@@ -1,0 +1,33 @@
+h3 {
+    color: steelblue;
+}
+
+.myTable{
+    margin:auto;
+    width:70%;
+    border:1px solid black;
+    border-collapse:collapse;
+    background-color:rgb(172,159,159);
+    color:rgb(21,43,79);
+}
+
+.myTable th{
+    background-color:rgba(163,26,26,0.647);
+    color:white;
+    text-align:left;
+    padding:5px;
+    
+}
+
+.myTable td{
+    padding:4px;
+    color:black;
+    border:1px solid brown;
+}
+
+.myTable tr:hover{
+    background-color:peachpuff;
+    font-size:20px;
+    font-style:italic;
+    transition-duration:0.5s;
+}

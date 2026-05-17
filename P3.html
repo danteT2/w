@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initail-scale=1.0">
+    <title>Prac 3</title>
+</head>
+
+<body>
+    <table bgcolor="bisque" align="center" width="50%" border="1" style="color:brown">
+        <tr>
+            <th style="background-color:maroon; color:white;">
+                <h1>Student Registration</h1>
+            </th>
+            <hr>
+        </tr>
+        <tr>
+            <td>
+
+                <form action="#" method="POST" style="margin:30px auto;">
+                    <center>
+                        <label for="name"><b>Name:</b></label><br>
+                        <input id="name" type="text" placeholder="Enter ur Name" name="Name" required
+                            style="text-align:center; width:95%; padding:2px">
+
+                        <br>
+                        <hr>
+                        <br>
+
+                        <label for="email"><b>Email ID</b></label><br>
+                        <input id="name" type="emial" name="Email_ID" placeholder="example@xyz.com"
+                            style="text-align:center; width:95%; padding:2px" required>
+
+                        <br>
+                        <hr>
+                        <br>
+
+                        <label for="dob">Date Of Birth: </label><br>
+                        <input id="dob" type="date" name="DOB" style="text-align:center; width:55%; padding:2px"
+                            required>
+
+                        <br>
+                        <hr>
+                        <br>
+
+                        <label for="gender">Gender</label><br>
+                        <select id="gender" name="gender" required>
+                            <option value="" selected disabled>Select ur Gender</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Other">Other</option>
+                        </select>
+
+                        <br>
+                        <hr>
+                        <br>
+
+                        <label>Subscription :</label><br>
+
+                        <div
+                            style="border:1px solid black; width:80%; padding:2px; margin:auto; background-color:teal; color:white;">
+
+                            <input id="basic" type="radio" name="subs" value="basic">
+                            <label for="basic">Basic</label>
+
+                            <input id="pro" type="radio" name="subs" value="pro">
+                            <label for="pro">Pro</label>
+
+                            <input id="premium" type="radio" name="subs" value="premium">
+                            <label for="premium">Premium</label>
+
+                        </div>
+
+                        <br>
+                        <hr>
+                        <br>
+
+                        <button type="reset"
+                            style="background-color:grey; color:beige; border:2px solid black">Clear</button>
+                        <button type="submit"
+                            style="background-color:palegreen; color:blue; border:2px solid black">Submit</button>
+
+                        <br>
+                        <br>
+
+                    </center>
+
+                </form>
+            </td>
+        </tr>
+
+    </table>
+</body>
+
+</html>

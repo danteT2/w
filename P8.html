@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .calculator{
+            border:1px solid black;
+            border-radius:15px;
+            text-align:center;
+            margin:50px auto;
+            padding:20px;
+            width:320px;
+            box-shadow:0px 0px 20px;
+            background-color:steelblue;
+            color:white;
+        }
+        .calculator input{
+            box-sizing:border-box;
+            margin:10px auto;
+            width:90%;
+            padding:10px;
+            font-size:15px;
+        }
+        .btn button {
+            width:20%;
+            font-size:20px;
+            padding:15px;
+            margin:5px;
+            cursor:pointer;
+            transition-duration:0.4s;
+        }
+        .btn button:hover{
+            background-color:grey;
+            color:white;
+        }
+        #result{
+            font-size:20px;
+            font-weight:bold;
+            color:coral;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <h2>JS Calculator</h2>
+
+        <input type="number" id="num1" placeholder="Enter First Number">
+        <input type="number" id="num2" placeholder="Enter Second Number">
+
+        <div class="btn">
+            <button onclick="calculate('+')">+</button>
+            <button onclick="calculate('-')">-</button>
+            <button onclick="calculate('*')">&times;</button>
+            <button onclick="calculate('/')">&div;</button>
+        </div>
+        <hr size="2" color="orange">
+        <p>Result : <span id="result">0</span></p>
+    </div>
+
+    <script>
+        function calculate(operator){
+            var x = parseFloat(document.getElementById("num1").value);
+            var y = parseFloat(document.getElementById("num2").value);
+            var result = document.getElementById("result");
+            var output = 0;
+
+            if(isNaN(x)||isNaN(y)){
+                alert("Plz enter valid numbers");
+                return false;
+            }
+
+
+            switch (operator){
+                case('+'):
+                    output = x + y;
+                    break;
+                case('-'):
+                    output= x - y;
+                    break;
+                case('*'):
+                    output = x*y;
+                    break;
+                case('/') :
+                    if(y === 0){
+                        alert("cant divide by zero");
+                        return false;
+                    }
+                    else{
+                        output= x/y;
+                        break;
+                    }    
+                default:
+                    output = "Invalid";
+            }
+            
+            result.innerHTML= output;
+        }
+    </script>
+</body>
+</html>
