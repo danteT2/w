@@ -1,93 +1,92 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Practical 4</title>
+
+    <link href="P4.css" rel="stylesheet">
+
     <style>
-        body{
-            background-color:beige;
+        body {
+            background-color: beige;
+        }
+
+        h1{
+            font-size:40px;
             font-family:arial,sans-serif;
-        }
-        .login-box{
-            width:300px;
-            margin:50px auto;
-            padding:20px;
-            border:1px solid maroon;
-            border-radius:10px;
-            box-shadow:0 0 10px maroon;
-            background-color:bisque;
-        }
-        .login-box h1{
-            text-align:center;
             color:maroon;
-            text-decoration:underline solid steelblue;
-        }
-        .login-box input{
-            width:100%;
-            padding:5px;
-            margin:10px auto;
-            box-sizing:border-box;
-        }
-        .login-box button{
-            width:100%;
-            margin:10px auto;
-            padding:3px;
-            border:1px solid maroon;
-            background-color:steelblue;
-            color:white;
-            transition-duration:0.4s;
-            cursor:pointer;
-        }
-        .login-box button:hover{
-            background-color:white;
-            color:steelblue;
+            border-bottom:1px solid black;
         }
     </style>
 </head>
 
 <body>
-    <div class="login-box">
-        <h1>Login</h1>
-        <form name="myForm" action="#" onsubmit="return validateForm()" method="post">
-            <label for="email">Email:</label>
-            <input id="email" type="text" name="Email_ID" placeholder="example@xyz.com">
 
-            <label for="pass">Password:</label>
-            <input id="pass" type="password" name="Pass" placeholder="**********">
+    <div align="center">
 
-            <button type="submit">Login</button>
-        </form>
+        <h1>CSS Implementation Demo</h1>
+
+        <hr size="2" color="brown">
+
+        <p style="font-size:20px; color:lightcoral; font-style:italic;">
+            This is stylized using Inline CSS
+        </p>
+
+        <br>
+
+        <hr id="line">
+
+        <h3>Student Academic Record (styled Via External CSS)</h3>
+
+        <table class="myTable">
+
+            <tr>
+                <th>Roll No</th>
+                <th>Name</th>
+                <th>Course</th>
+                <th>Result</th>
+            </tr>
+
+            <tr>
+                <td>01</td>
+                <td>Himesh Dhanawat</td>
+                <td>Computer Engineering</td>
+                <td style="color: rgb(12, 236, 228);"><b>Pass</b></td>
+            </tr>
+
+            <tr>
+                <td>02</td>
+                <td>Karan Dhoke</td>
+                <td>Information Technology</td>
+                <td style="color: rgb(12, 236, 228);"><b>Pass</b></td>
+            </tr>
+
+            <tr>
+                <td>03</td>
+                <td>Swaraj Pawar</td>
+                <td>Mechanical Engineering</td>
+                <td style="color: rgb(12, 236, 228);"><b>Pass</b></td>
+            </tr>
+
+            <tr>
+                <td>04</td>
+                <td>Onkar Rakshe</td>
+                <td>Civil Engineering</td>
+                <td style="color: rgb(12, 236, 228);"><b>Pass</b></td>
+            </tr>
+
+            <tr>
+                <td>05</td>
+                <td>Hardik Beshrem</td>
+                <td>Electronics Engineering</td>
+                <td style="color: pink;"><b>Fail</b></td>
+            </tr>
+
+        </table>
+
     </div>
 
-    <script>
-        function validateForm(){
-            var email= document.getElementById("email").value;
-            var pass = document.getElementById("pass").value;
-
-            if(email===""||pass===""){
-                alert("Fields can't be empty !!");
-                return false;
-            }
-
-            var atPos= email.indexOf("@");
-            var dotPos= email.lastIndexOf(".");
-
-            if(atPos<1||dotPos<atPos+2||dotPos+2>=email.length){
-                alert("Invalid Email !! Plz enter a valid Email");
-                return false;
-            }
-
-            if(pass.length<6){
-                alert("Password must contain atleast 6 characters");
-                return false;
-            }
-
-            alert("Submitting the form....");
-            return true;
-        }
-    </script>
 </body>
-
 </html>
